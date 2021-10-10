@@ -13,3 +13,12 @@ TODO: Create/extend an existing puppet module for Nginx including the following 
 - (Optional) Implement a proxy health check.
 
 ## Module Explanation
+
+## Resources
+
+- [Official Puppet Website](https://puppet.com)
+- [Puppet Documentation](https://puppet.com/docs/)
+- [Learn Puppet](https://learn.puppet.com)
+- [Puppet Youtube Channel](https://www.youtube.com/c/Puppet-Inc)
+- [bolt documentation](https://puppet.com/docs/bolt/latest/bolt.html)
+- [Puppet Community Slack](http://puppetcommunity.slack.com)
