@@ -14,11 +14,29 @@ TODO: Create/extend an existing puppet module for Nginx including the following 
 
 ## 0. Preparing Dev Environment
 
+### Dev Environment
+
+```plantuml
+@startuml
+
+node master.puppet.vm as master 
+rectangle DockerAgent {
+    node web.puppet.vm as web
+    node db.puppet.vm as db
+}
+master --> web
+master --> db
+
+@enduml
+```
+
+### Instruction
+
 - Install VirtualBox: https://www.virtualbox.org
 - Install Vagrant: https://www.vagrantup.com
 - Download `Vagrantfile`
 - Open `Terminal` app or equvalent app.
-- Go into the directory of `Vagrantfile` 
+- Go into the directory of `Vagrantfile`
 - VM up and running
 
     ```bash
@@ -92,24 +110,23 @@ TODO: Create/extend an existing puppet module for Nginx including the following 
     
     - Edit with below
 
-    ```yaml
-    ---
-    :cachedir: '/var/cache/r10k/'
-    
-    :sources:
-      :my-org:
-        remote: 'https://github.com/erdnbt/control-repo.git'
-        basedir: '/etc/puppetlabs/code/environments'
-    ```
+        ```yaml
+        ---
+        :cachedir: '/var/cache/r10k/'
+        
+        :sources:
+          :my-org:
+            remote: 'https://github.com/erdnbt/control-repo.git'
+            basedir: '/etc/puppetlabs/code/environments'
+        ```
 
-    - Deploy
+- Deploy
 
     ```bash
     r10k deploy environment -p
     # check the github repo is cloned
     ls /etc/puppetlabs/code/environments/production/
     ```
-
 
 ## Module Explanation
 
