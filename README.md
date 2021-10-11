@@ -130,6 +130,27 @@ master --> db
 
 ## Module Explanation
 
+- Puppet NGINX module
+    - Link to module: https://forge.puppet.com/modules/puppet/nginx
+    - Link to how to start page: https://github.com/voxpupuli/puppet-nginx/blob/master/docs/quickstart.md
+
+For Dev Environment, I created Vagrantfile to see how Puppet works. 
+In Puppet Master VM, I installed docker by using Puppet Dockeragent module. In docker, there are two containers running named web.puppet.vm and db..puppet.vm. 
+The web side container, I install nginx using Puppet module. 
+
+### Folder & File description
+
+| Folder & File | | Description |
+| --: | :-- | :-- |
+| manifests/ |  | Puppet Manifest file folder |
+|  | site.pp | The "main" manifest that contains a default node definition. |
+| site/ |  | Puppet manifests files of Roles & Profiles |
+|  | profile/manifests/ | |
+|  | role/manifests/ | |
+| environment.conf |  | Environment-specific settings. Configures the modulepath and config_version. |
+| Puppetfile |  | A list of external Puppet modules to deploy with an environment.  |
+| README.md |  | This file |
+
 ## Resources
 
 - [Official Puppet Website](https://puppet.com)
