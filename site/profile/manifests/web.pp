@@ -10,7 +10,8 @@ class profile::web {
     www_root  => '/opt/html/',
   }
 
-  nginx::resource::location{'/resource':
-    proxy     => 'http://20.20.20.20/' ,
-    server    => 'https://domain.com'
+  nginx::resource::location { '/resource':
+    proxy     => 'http://20.20.20.20/',
+    server    => 'https://domain.com',
+  }
 }
