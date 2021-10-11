@@ -134,9 +134,7 @@ master --> db
     - Link to module: https://forge.puppet.com/modules/puppet/nginx
     - Link to how to start page: https://github.com/voxpupuli/puppet-nginx/blob/master/docs/quickstart.md
 
-For Dev Environment, I created Vagrantfile to see how Puppet works. 
-In Puppet Master VM, I installed docker by using Puppet Dockeragent module. In docker, there are two containers running named web.puppet.vm and db..puppet.vm. 
-The web side container, I install nginx using Puppet module. 
+For Dev Environment, I created Vagrantfile to see how Puppet works. In Puppet Master VM, I installed docker by using the Puppet Dockeragent module. In docker, there are two containers running named web.puppet.vm and db.puppet.vm. For the web side container, I install Nginx using the Puppet module.
 
 ### Folder & File description
 
